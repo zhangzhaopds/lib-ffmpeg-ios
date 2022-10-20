@@ -15,4 +15,10 @@ Pod::Spec.new do |s|
 
   s.libraries = 'bz2', 'c++', 'z', 'iconv'
   s.frameworks = 'UIKit','AudioToolBox','CoreImage','CoreMedia','VideoToolBox','AVFoundation'
+
+  s.pod_target_xcconfig = {
+    'LIBRARY_SEARCH_PATHS'   => '$(inherited)   $(PODS_CONFIGURATION_BUILD_DIR)/../ffmpeg-libs/lib',
+    'HEADER_SEARCH_PATHS'   => '$(inherited)   $(PODS_CONFIGURATION_BUILD_DIR)/../ffmpeg-libs/include',
+    'VALID_ARCHS' => 'x86_64 armv7 arm64'
+  }
 end
