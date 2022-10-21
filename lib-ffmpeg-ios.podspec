@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "11.0"
   s.source       = { :git => "https://github.com/zhangzhaopds/lib-ffmpeg-ios.git", :tag => "ffmpeg-4.0" }
 
-  s.vendored_libraries =  'ffmpeg-libs/lib/*.a'
+  s.vendored_libraries = 'ffmpeg-libs/lib/libavcodec.a','ffmpeg-libs/lib/libavfilter.a','ffmpeg-libs/lib/libavformat.a','ffmpeg-libs/lib/libavutil.a','ffmpeg-libs/lib/libswresample.a','ffmpeg-libs/lib/libswscale.a' 
   s.source_files = 'ffmpeg-libs/include/**/*.{h}'
   s.public_header_files = 'ffmpeg-libs/include/**/*.{h}'
 
